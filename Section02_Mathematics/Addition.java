@@ -3,7 +3,6 @@
 package Section02_Mathematics;
 
 public class Addition {
-    // User function Template for Java
     static int addition(int a, int b) {
         // code here
         int sum = a+b;
