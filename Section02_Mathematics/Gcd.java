@@ -1,3 +1,6 @@
+//Given two positive integers a and b, find GCD of a and b.
+// Note: Don't use the inbuilt gcd function
+
 package Section02_Mathematics;
 
 public class Gcd {
