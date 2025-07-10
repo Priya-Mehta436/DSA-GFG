@@ -4,12 +4,9 @@ package Section03_BitMagic;
 
 public class Set_Kth_Bit {
     // User function Template for Java
-class Solution {
     static int setKthBit(int n, int k) {
         // code here
         return n | (1<<k);
         
         }
     }
-    
-}
