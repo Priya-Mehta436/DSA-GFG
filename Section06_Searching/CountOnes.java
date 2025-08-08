@@ -1,6 +1,6 @@
 /*You are given a binary array that is sorted in non-increasing order, meaning all the 1's appear before the 0's. Find the total number of 1's present in the array. */
 
-package Section06_Searching;
+
 public class CountOnes {
     public int countOnes(int[] arr) {
         int n = arr.length;
