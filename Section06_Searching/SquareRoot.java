@@ -1,46 +1,22 @@
 package Section06_Searching;
-import java.util.ArrayList;
-
 public class SquareRoot {
-    public static ArrayList<Integer> findUnion(int a[], int b[]) {
-        
-        ArrayList<Integer> res = new ArrayList<>();
-        
-        int i = 0, j = 0;
-        
-        int n = a.length, m = b.length;
-
-        while (i < n && j < m) {
-            if (i > 0 && a[i] == a[i - 1]) {
-                i++;
-                continue;
+    int floorSqrt(int n) {
+        // code here
+        int low = 1, high = n, ans = -1;
+        while(low <= high){
+            int mid = (low + high)/2;
+            int mSq = mid * mid;
+            if(mSq == n){
+                return mid;
             }
-            if (j > 0 && b[j] == b[j - 1]) {
-                j++;
-                continue;
+            else if (mSq > n){
+                high = mid - 1;
             }
-            if (a[i] < b[j]) {
-                res.add(a[i]);
-                i++;
-            } else if (a[i] > b[j]) {
-                res.add(b[j]);
-                j++;
-            } else {
-                res.add(a[i]);
-                i++;
-                j++;
+            else {
+                low = mid + 1;
+                ans = mid;
             }
         }
-        while (i < n) {
-            if (i == 0 || a[i] != a[i - 1])
-                res.add(a[i]);
-            i++;
-        }
-        while (j < m) {
-            if (j == 0 || b[j] != b[j - 1])
-                res.add(b[j]);
-            j++;
-        }
-        return res;
+        return ans;
     }
 }
